@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup_args = dict(
     name="apiclient-gonzalo123",
-    version="1.0.0",
+    version="1.0.1",
     author="Gonzalo Ayuso",
     author_email="gonzalo123@gmail.com",
     description="apiclient",

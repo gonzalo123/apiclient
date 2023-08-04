@@ -18,6 +18,7 @@ class ApiClient:
     def _get_headers(token):
         return {
             'token': token,
+            'x-client': 'apiclient',
             'Content-Type': 'application/json'
         }
 

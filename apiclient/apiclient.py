@@ -5,6 +5,10 @@ class ApiClientException(Exception):
     pass
 
 
+class ApiClientAuthException(Exception):
+    pass
+
+
 class ApiClient:
     def __init__(self, token, base):
         self.token = token
@@ -32,6 +36,8 @@ class ApiClient:
                 return self._zip(*data)
             else:
                 return data
+        elif response.status_code == 401:
+            raise ApiClientAuthException('not valid token')
         else:
             raise ApiClientException(response.json())
 
